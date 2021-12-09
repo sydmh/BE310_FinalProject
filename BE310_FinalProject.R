@@ -44,4 +44,14 @@ numAMF.FPD.lm <- lm(FaithPhylogeneticDiversity ~ num_AMFspecies, data = num_AMF_
 lm_summary <- summary(numAMF.FPD.lm)
 lm_summary
 
+# graph 4: Total Fluorescence vs Faith's Diversity
+num_AMF_data %>%
+  ggplot(mapping = aes(x = FaithPhylogeneticDiversity, y = Total Fluorescence)) +
+  Geom_point(color = 'black) 
+
+# linear regression for Total Fluorescence vs Faith's Diversity
+  tf.FPD.lm <- lm(Total Fluorescence ~ FaithPhylogeneticDiversity, data = num_AMF_data)
+  lm_summary2 <- summary(tf.FPD.lm)
+  lm_summary2
+  
 
