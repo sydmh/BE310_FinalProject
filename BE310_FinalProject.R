@@ -50,6 +50,8 @@ num_AMF_data %>%
   Geom_point(color = 'black) 
 
 # linear regression for Total Fluorescence vs Faith's Diversity
-  tf
+  tf.FPD.lm <- lm(Total Fluorescence ~ FaithPhylogeneticDiversity, data = num_AMF_data)
+  lm_summary2 <- summary(tf.FPD.lm)
+  lm_summary2
   
 
