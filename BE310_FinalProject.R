@@ -28,12 +28,22 @@ num_AMF_data %>%
   labs(x = "Number of AMF Species Present", y = "Total Fluorescence") +
   stat_smooth(method = "lm", col = "red")
 
+# linear regression for Total Fluorescence vs. # AMF species
+numAMF.TF.lm <- lm(InitialSeedlingSize_leaves ~ num_AMFspecies, data = num_AMF_data)
+lm_summary1 <- summary(numAMF.TF.lm)
+lm_summary1
+
 # graph 2: Initial Seedling Size vs. # AMF species
 num_AMF_data %>%
   ggplot(mapping = aes(x = num_AMFspecies, y = InitialSeedlingSize_leaves)) +
   geom_point(color = 'black') +
   labs(x = "Number of AMF Species Present", y = "Initial Seedling Size (# of leaves)") +
   stat_smooth(method = "lm", col = "red")
+
+# linear regression for Initial Seedling Size vs. # AMF species
+numAMF.ISS.lm <- lm(InitialSeedlingSize_leaves ~ num_AMFspecies, data = num_AMF_data)
+lm_summary2 <- summary(numAMF.ISS.lm)
+lm_summary2
 
 # graph 3: Faith's Diversity vs. # AMF species
 num_AMF_data %>%
@@ -42,20 +52,19 @@ num_AMF_data %>%
   labs(x = "Number of AMF Species Present", y = "Faith's Phylogenetic Diversity Value") +
   stat_smooth(method = "lm", col = "red")
 
-#linear regression
+# linear regression for Faith's Diversity vs. # AMF species
 numAMF.FPD.lm <- lm(FaithPhylogeneticDiversity ~ num_AMFspecies, data = num_AMF_data)
-lm_summary1 <- summary(numAMF.FPD.lm)
-lm_summary1
+lm_summary3 <- summary(numAMF.FPD.lm)
+lm_summary3
 
-# graph 4: Total Fluorescence vs Faith's Diversity
+# graph 4: Total Fluorescence vs. Faith's Diversity
 num_AMF_data %>%
   ggplot(mapping = aes(x = FaithPhylogeneticDiversity, y = TotalFluorescence)) +
   geom_point(color = 'black') +
   labs(x = "Faith's Phylogenetic Diversity Value", y = "Total Fluorescence") +
   stat_smooth(method = "lm", col = "red")
 
-# linear regression for Total Fluorescence vs Faith's Diversity
+# linear regression for Total Fluorescence vs. Faith's Diversity
 tf.FPD.lm <- lm(TotalFluorescence ~ FaithPhylogeneticDiversity, data = num_AMF_data)
-lm_summary2 <- summary(tf.FPD.lm)
-lm_summary2
-  
+lm_summary4 <- summary(tf.FPD.lm)
+lm_summary4
