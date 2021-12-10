@@ -7,8 +7,9 @@
 ##### BE310_Histogram_InitialSize.png: image file of a historgram for Intial Size made in R.
 ##### BE310_Histogram_NumAMF.png: image file of a historgram for # of AMF Species made in R.
 ##### BE310_LinearRegression_FPDvsNumAMF.png: graph of Faith's Phylogenetic Diversity vs. # of AMF species, with a linear regression line, made in R.
-##### BE310_Plot_FluorescencevsNumAMF.png: graph of Fluorescence vs. # of AMF species made in R.
-##### BE310_Plot_InitialSizevsNumAMF.png: graph of Initial Size vs. # of AMF species made in R.
+##### BE310_LinearRegression_FluorescencevsNumAMF.png: graph of Fluorescence vs. # of AMF species, with a linear regression line, made in R.
+##### BE310_LinearRegression_InitialSizevsNumAMF.png: graph of Initial Size vs. # of AMF species, with a linear regression line, made in R.
+##### BE310_LinearRegression_FluorescencevsFPD.png: graph of Flourescence vs. Faith's Phylogenetic Diversity, with a linear regression line, made in R.
 ##### BE310_Project_CleanData_Field.csv: csv file containing our tidy data from one of the Field experiments from the paper data. The raw data file is in the zip folder in this repo.
 ##### doi_10.5061_dryad.43sg3_v1.zip: zip folder containing files like their original data sheets, cleaned up data, and their README file.
 
